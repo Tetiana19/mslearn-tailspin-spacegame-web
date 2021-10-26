@@ -1,7 +1,15 @@
+- task: SonarQubePrepare@4
+  inputs:
+    SonarQube: 'Sonar'
+    scannerMode: 'MSBuild'
+    projectKey: 'spacegame-web_spacegame-web'
+    projectName: 'spacegame-web'
+
 trigger:
   branches:
     include:
     - terraform-pipeline
+
 
 variables:
   buildConfiguration: 'Release'
