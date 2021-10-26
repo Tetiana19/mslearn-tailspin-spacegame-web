@@ -5,7 +5,7 @@ trigger:
     include:
     - terraform-pipeline
 
-steps:
+stages:
 - task: SonarQubePrepare@4
   inputs:
     SonarQube: 'Sonar'
@@ -18,7 +18,7 @@ variables:
   buildConfiguration: 'Release'
   ServiceConnnectionName: 'Tailspin.SpaceGame.Web.Full'
 
-stages:
+
 - stage: 'Build'
   displayName: 'Build the web application'
   jobs: 
